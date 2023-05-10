@@ -7,5 +7,4 @@ const VueTawkMessenger = {
 	install
 };
 
-
 export default VueTawkMessenger;

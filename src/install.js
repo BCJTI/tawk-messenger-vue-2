@@ -1,34 +1,24 @@
 // Lib
 import TawkMessenger from './lib';
 
-// Utilities
-import { isValidString } from './utils/helper';
-
 function install(Vue, options = {}) {
 	const { propertyId, widgetId } = options;
 
-	if (!isValidString(propertyId)) {
+	if (!propertyId || typeof propertyId !== string) {
 		console.error('[Tawk-messenger-vue warn]: You didn\'t specified \'propertyId\' property in the plugin.');
 		return;
 	}
 
-	if (!isValidString(widgetId)) {
+	if (!widgetId || typeof widgetId !== string) {
 		console.error('[Tawk-messenger-vue warn]: You didn\'t specified \'widgetId\' property in the plugin.');
 		return;
 	}
 
-	Vue.mixin({
-		mounted() {
-			const root = new Vue();
+	const root = new Vue();
 
-			new TawkMessenger(root, options);
+	new TawkMessenger(root, options);
 
-			Vue.prototype.$tawkMessenger = root;
-		}
-	});
+	Vue.prototype.$tawkMessenger = root;
 }
 
-
-export {
-	install
-};
+export { install };
