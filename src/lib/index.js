@@ -3,11 +3,11 @@ import { loadScript } from '../utils/widget';
 
 class TawkMessenger {
 	constructor(root, options) {
-		if (!options.propertyId || typeof options.propertyId !== string) {
+		if (!options.propertyId || typeof options.propertyId !== 'string') {
 			return;
 		}
 
-		if (!options.widgetId || typeof options.widgetId !== string) {
+		if (!options.widgetId || typeof options.widgetId !== 'string') {
 			return;
 		}
 

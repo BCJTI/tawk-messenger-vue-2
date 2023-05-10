@@ -4,12 +4,12 @@ import TawkMessenger from './lib';
 function install(Vue, options = {}) {
 	const { propertyId, widgetId } = options;
 
-	if (!propertyId || typeof propertyId !== string) {
+	if (!propertyId || typeof propertyId !== 'string') {
 		console.error('[Tawk-messenger-vue warn]: You didn\'t specified \'propertyId\' property in the plugin.');
 		return;
 	}
 
-	if (!widgetId || typeof widgetId !== string) {
+	if (!widgetId || typeof widgetId !== 'string') {
 		console.error('[Tawk-messenger-vue warn]: You didn\'t specified \'widgetId\' property in the plugin.');
 		return;
 	}
